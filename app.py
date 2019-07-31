@@ -21,6 +21,7 @@ def login():
         return home()
 
 
+
 @app.route('/signup', methods=['POST'])
 def signup():
     #check that username isn't already taken
@@ -30,8 +31,12 @@ def signup():
     return home()
 
 
-@app.route('/logged-in')
-def logged_in():
+@app.route('/logged-in', methods= ['POST', ' GET'])
+def logged_in():     
+    food = get_user(request.form['username'])
+
+    login_session['food'] = user.fav_food
+
     return render_template('logged.html')
 
 

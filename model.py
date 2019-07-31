@@ -10,6 +10,7 @@ class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True)
     #what else does a user account need? 
+    fav_food = Column(String)
     username = Column(String)
     password_hash = Column(String)
 

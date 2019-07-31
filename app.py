@@ -38,6 +38,7 @@ def logged_in():
 @app.route('/logout')
 def logout():
     return home()
+    # return render_template('log_out.html')
 
 
 

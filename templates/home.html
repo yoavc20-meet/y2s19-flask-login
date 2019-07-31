@@ -2,9 +2,9 @@
 Login form WITH session!
 </h1>
 
-{%if session['logged_in']%}
+<!-- {%if session['logged_in']%}
 Hi {{session['name']}}, you are logged in.
-{%endif%}
+{%endif%} -->
 
 <form action="/login" method="POST">
   <input type="username" name="username" placeholder="Username">
@@ -13,7 +13,7 @@ Hi {{session['name']}}, you are logged in.
 </form>
 
 <form action="/signup" method="POST">
-  <input type="username" name="username" placeholder="Username">
+<input type="username" name="username" placeholder="Username">
 <input type="password" name="password" placeholder="Password">
 <input type="submit" value="Sign up">
 </form>

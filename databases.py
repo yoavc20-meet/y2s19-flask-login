@@ -12,8 +12,14 @@ def add_user(name,secret_word):
     """Add a user to the DB."""
     user = User(username=name)
     #there is a line of code missing here, what else does a user need?
+    user.hash_password(secret_word)
     session.add(user)
     session.commit()
+def add_food(username ,food):
+	food = User(food = fav_food)
+	user = get_user(username)
+	user.fav_food = food
+	session.commit()
 
 def get_user(username):
     """Find the first user in the DB, by their username."""
